@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Veil — Verified Public-Sector Datasets</title>
+  <meta name="description" content="Meridian Veil provides structured, verified datasets built from public sources for go-to-market and research teams." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#101a33;
+      --text:#e9eefc;
+      --muted:#b7c1df;
+      --line:rgba(233,238,252,.12);
+      --accent:#7c5cff;
+      --accent2:#2dd4bf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(124,92,255,.22), transparent 55%),
+                  radial-gradient(900px 600px at 80% 30%, rgba(45,212,191,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1080px; margin:0 auto; padding:28px 20px 64px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0 24px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 30px rgba(124,92,255,.25);
+    }
+    .brand b{letter-spacing:.2px}
+    nav{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{color:var(--muted); text-decoration:none; font-size:14px}
+    nav a:hover{color:var(--text)}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      padding:28px 0 10px;
+      align-items:start;
+    }
+    @media (max-width: 880px){ .hero{grid-template-columns:1fr} }
+    h1{font-size:44px; margin:0 0 10px; line-height:1.08}
+    .sub{color:var(--muted); font-size:16px; max-width:60ch}
+    .bullets{margin:18px 0 22px; padding:0; list-style:none}
+    .bullets li{
+      margin:10px 0; padding-left:22px; position:relative; color:var(--text)
+    }
+    .bullets li::before{
+      content:"";
+      width:10px; height:10px; border-radius:3px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      position:absolute; left:0; top:.45em;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:14px; border:1px solid var(--line);
+      text-decoration:none; font-weight:600; font-size:14px;
+      background: rgba(16,26,51,.55);
+      backdrop-filter: blur(6px);
+    }
+    .btnPrimary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #071019;
+    }
+    .panel{
+      border:1px solid var(--line);
+      background: rgba(16,26,51,.55);
+      border-radius:18px;
+      padding:16px;
+      backdrop-filter: blur(6px);
+    }
+    .panel h3{margin:0 0 8px; font-size:16px}
+    .panel p{margin:0; color:var(--muted); font-size:14px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+    @media (max-width: 880px){ .grid{grid-template-columns:1fr} }
+    section{margin-top:34px}
+    h2{font-size:22px; margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .steps{display:grid; grid-template-columns: repeat(5, 1fr); gap:10px}
+    @media (max-width: 880px){ .steps{grid-template-columns:1fr} }
+    .tag{
+      display:inline-flex; align-items:center;
+      border:1px solid var(--line); border-radius:999px;
+      padding:6px 10px; font-size:12px; color:var(--muted);
+      margin:6px 8px 0 0;
+      background: rgba(16,26,51,.35);
+    }
+    footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+    .small{font-size:12px; color:var(--muted)}
+    input, textarea{
+      width:100%; padding:12px 12px;
+      border-radius:14px; border:1px solid var(--line);
+      background: rgba(11,16,32,.35);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:92px; resize:vertical}
+    label{display:block; font-size:12px; color:var(--muted); margin:10px 0 6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <b>Meridian Veil</b><div class="small">Verified public-sector datasets</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#what">What we do</a>
+        <a href="#datasets">Datasets</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <h1>Structured, verified public-sector datasets—ready for your CRM.</h1>
+        <p class="sub">
+          Meridian Veil turns fragmented public sources into clean, standardized records for go-to-market and research teams.
+        </p>
+        <ul class="bullets">
+          <li>Verified org + contact records across local government and public institutions</li>
+          <li>Delivered as CSV/Excel/API-ready tables with consistent IDs and refresh cycles</li>
+        </ul>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#contact">Request access</a>
+          <a class="btn" href="#datasets">View dataset coverage</a>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <h3>Sample fields</h3>
+        <p>Organization, parent entity, website, address, phone, department, role/title normalization, source URLs, last verified date, change flags.</p>
+        <div style="margin-top:10px">
+          <span class="tag">Provenance</span>
+          <span class="tag">Normalization</span>
+          <span class="tag">Refresh cadence</span>
+        </div>
+      </aside>
+    </main>
+
+    <section id="what">
+      <h2>What Meridian Veil provides</h2>
+      <p class="muted">Publicly sourced data, verified and standardized so it can be used immediately—without weeks of cleanup.</p>
+      <div class="grid">
+        <div class="panel"><h3>Entity resolution</h3><p>Unify names, domains, addresses, and org hierarchies.</p></div>
+        <div class="panel"><h3>Contact enrichment</h3><p>Role/title normalization and department mapping (when publicly listed).</p></div>
+        <div class="panel"><h3>Standardized schema</h3><p>Consistent fields designed for CRMs and data warehouses.</p></div>
+        <div class="panel"><h3>Change tracking</h3><p>Refresh cycles with diffs so records stay current.</p></div>
+        <div class="panel"><h3>Custom builds</h3><p>Targeted lists by region, segment, or vertical.</p></div>
+        <div class="panel"><h3>Delivery formats</h3><p>CSV/Excel, plus API-ready tables and documentation.</p></div>
+      </div>
+    </section>
+
+    <section id="datasets">
+      <h2>Datasets</h2>
+      <p class="muted">Initial coverage focuses on public institutions with clear source provenance.</p>
+      <div class="grid">
+        <div class="panel"><h3>Local Government</h3><p>Cities, counties, towns, and agencies (as available).</p></div>
+        <div class="panel"><h3>Education</h3><p>Districts and institutions with publicly listed contacts.</p></div>
+        <div class="panel"><h3>Special Districts</h3><p>Utilities, water, fire, and other districts (varies by state).</p></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="panel"><h3>1) Source</h3><p>Collect from publicly available sources.</p></div>
+        <div class="panel"><h3>2) Verify</h3><p>Validate key fields and provenance.</p></div>
+        <div class="panel"><h3>3) Structure</h3><p>Normalize to a consistent schema.</p></div>
+        <div class="panel"><h3>4) Deliver</h3><p>Export in customer-ready formats.</p></div>
+        <div class="panel"><h3>5) Refresh</h3><p>Update cadence + diffs over time.</p></div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:28px">
+      <h2 style="margin-bottom:8px">Trust & provenance</h2>
+      <p class="muted" style="margin:0">
+        Meridian Veil builds datasets from publicly available sources and organizational websites.
+        We prioritize accuracy, provenance, and update cadence. For questions, corrections, or removals, contact us below.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Request access</h2>
+      <p class="muted">Tell us what you’re looking for and we’ll share a sample schema and coverage notes.</p>
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div class="panel">
+          <form>
+            <label for="email">Work email</label>
+            <input id="email" type="email" placeholder="name@company.com" />
+            <label for="msg">What are you trying to do with the data?</label>
+            <textarea id="msg" placeholder="e.g., clean CRM accounts, build territory lists, research public institutions..."></textarea>
+            <div style="margin-top:12px">
+              <button class="btn btnPrimary" type="button">Send</button>
+            </div>
+            <p class="small" style="margin-top:10px">This form is a placeholder—wire it to your email provider or form backend.</p>
+          </form>
+        </div>
+        <div class="panel">
+          <h3>Contact</h3>
+          <p class="muted">Email: <a href="mailto:info@meridianveil.com">info@meridianveil.com</a></p>
+          <p class="muted">Based in the U.S. • B2B information services</p>
+          <div style="margin-top:10px">
+            <span class="tag">Public sources</span>
+            <span class="tag">Verification</span>
+            <span class="tag">Standardized fields</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Meridian Veil. All rights reserved.
+      <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+    </footer>
+  </div>
+</body>
+</html>
