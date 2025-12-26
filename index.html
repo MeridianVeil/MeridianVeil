@@ -36,7 +36,7 @@
       height:150px;
       border-radius:16px;
       display:block;
-      box-shadow: 0 12px 36px rgba(124,92,255,.25);
+      box-shadow: 0 10px 28px rgba(124,92,255,.25);
     }
     .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
     .logo{
@@ -202,14 +202,17 @@
 
     <section class="panel" style="margin-top:28px">
       <h2 style="margin-bottom:8px">Trust & provenance</h2>
-      <img src="MV_brand2.png"
-         alt="Meridian Veil brand mark"
-         style="max-width:260px; width:100%; height:auto; margin-top:14px; opacity:.95;">
+      <div class="trustRow">
+  <img src="MV_brand2.png" alt="Meridian Veil brand mark" class="trustMark">
 
-      <p class="muted" style="margin:0">
-        Meridian Veil builds datasets from publicly available sources and organizational websites.
-        We prioritize accuracy, provenance, and update cadence. For questions, corrections, or removals, contact us below.
-      </p>
+  <div class="trustText">
+    <p>
+      Meridian Veil builds datasets from publicly available sources and organizational websites.
+      We prioritize accuracy, provenance, and update cadence. For questions, corrections, or
+      removals, contact us below.
+    </p>
+  </div>
+</div>
     </section>
 
     <section id="contact">
@@ -242,12 +245,13 @@
     </section>
 
     <footer>
-      © <span id="y"></span> Meridian Veil. All rights reserved.
+      © 2025 Meridian Veil • Publicly sourced data • U.S.-based • All rights reserved
       <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
     </footer>
   </div>
 </body>
 </html>
+
 
 
 
