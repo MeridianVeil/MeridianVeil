@@ -120,14 +120,34 @@
     }
     textarea{min-height:92px; resize:vertical}
     label{display:block; font-size:12px; color:var(--muted); margin:10px 0 6px}
+    .logoWrap { display:block; }
+    #mvLogoVideo, #mvLogoStatic { border-radius:16px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <a class="brand" href="#">
-        <img class="logoImg" src="MV logo.png" alt="Meridian Veil logo">
-        <div>
+        <div class="logoWrap">
+  <video
+    id="mvLogoVideo"
+    class="logoImg"
+    muted
+    playsinline
+    preload="metadata"
+    style="display:none"
+  >
+    <source src="MV_animated_final.mp4" type="video/mp4" />
+  </video>
+
+  <img
+    id="mvLogoStatic"
+    class="logoImg"
+    src="MV logo.png"
+    alt="Meridian Veil logo"
+  />
+</div>
+       <div>
           <b>Meridian Veil</b><div class="small">Verified public-sector datasets</div>
         </div>
       </a>
@@ -251,10 +271,63 @@
     <footer>
       © 2025 Meridian Veil • Publicly sourced data • U.S.-based • All rights reserved
       <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+      <span id="y"></span>
     </footer>
   </div>
+  <script>
+(function () {
+  const video = document.getElementById("mvLogoVideo");
+  const img = document.getElementById("mvLogoStatic");
+  if (!video || !img) return;
+
+  const SESSION_KEY = "mv_logo_anim_played";
+
+  // If we've already played this session, show static immediately.
+  if (sessionStorage.getItem(SESSION_KEY) === "1") {
+    video.style.display = "none";
+    img.style.display = "block";
+    return;
+  }
+
+  // Otherwise, prep to play when it scrolls into view.
+  const playOnce = async () => {
+    // Swap to video
+    img.style.display = "none";
+    video.style.display = "block";
+
+    try {
+      await video.play();
+    } catch (e) {
+      // Autoplay might be blocked; fall back to static
+      video.style.display = "none";
+      img.style.display = "block";
+      sessionStorage.setItem(SESSION_KEY, "1");
+      return;
+    }
+
+    // When finished, freeze on static logo
+    video.addEventListener("ended", () => {
+      sessionStorage.setItem(SESSION_KEY, "1");
+      video.style.display = "none";
+      img.style.display = "block";
+    }, { once: true });
+  };
+
+  // Use IntersectionObserver so it only plays when visible
+  const obs = new IntersectionObserver((entries) => {
+    if (entries.some(e => e.isIntersecting)) {
+      obs.disconnect();
+      playOnce();
+    }
+  }, { threshold: 0.6 });
+
+  obs.observe(img);
+})();
+</script>
+
 </body>
 </html>
+
 
 
 
